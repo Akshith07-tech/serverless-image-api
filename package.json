@@ -1,0 +1,10 @@
+{
+  "name": "serverless-image-api",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.0"
+  }
+}
