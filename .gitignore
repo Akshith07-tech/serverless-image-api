@@ -1,5 +1,16 @@
+# Node modules
 node_modules/
-.env
-.DS_Store
 
-.serverless/
+# Build artifacts
+build/
+build.zip
+
+# Local mock buckets / temp files
+local/localBucket/
+*.b64
+*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+

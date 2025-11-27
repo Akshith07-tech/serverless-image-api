@@ -1,21 +1,21 @@
-import fs from "fs";
-import { upload, list } from "./handler.js"; // Your handler functions
+import fs from "fs/promises";
+import { upload, listWithUrls } from "./handler.js"; // correct export
 
 // 1️⃣ Test upload
-const base64 = fs.readFileSync("img.txt", "utf-8");
-const uploadEvent = { body: JSON.stringify({ imageBase64: base64 }) };
+(async () => {
+  try {
+    const base64 = await fs.readFile("img.txt", "utf-8");
+    const uploadEvent = { body: JSON.stringify({ imageBase64: base64 }) };
 
-upload(uploadEvent)
-  .then((res) => {
-    console.log("Upload Response:", res);
+    const uploadRes = await upload(uploadEvent);
+    console.log("Upload Response:", uploadRes);
 
-    // 2️⃣ After upload, test list
-    list()
-      .then((listRes) => {
-        console.log("List Response:", listRes);
-      })
-      .catch(console.error);
-  })
-  .catch(console.error);
+    // 2️⃣ Test list
+    const listRes = await listWithUrls();
+    console.log("List Response:", listRes);
 
+  } catch (err) {
+    console.error("Error:", err);
+  }
+})();
 

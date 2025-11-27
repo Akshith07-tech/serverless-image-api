@@ -9,7 +9,7 @@ export const upload = async (event) => {
   const { imageBase64 } = body;
 
   const id = uuidv4();
-  const buffer = Buffer.from(imageBase64, "base64");
+  const buffer = Buffer.from(body.fileContent.replace(/\n/g,""), "base64");
 
   await s3.putObject({
     Bucket: process.env.BUCKET_NAME,
