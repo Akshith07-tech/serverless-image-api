@@ -42,6 +42,16 @@ A **Serverless image upload and retrieval API built with Node.js** and **AWS ser
 
 ---
 
+## Project Workflow
+
+<img 
+    src="./assets/serverless.png" 
+    alt="Diagram showing the serverless architecture workflow" 
+    width="800"
+    height="600"
+/>
+
+---
 ## 📂 Project Structure
 
 * **serverless-image-api/**
@@ -185,6 +195,26 @@ curl -X POST "https://<api-id>.execute-api.us-east-1.amazonaws.com/upload" \
   }
 ]
 ```
+---
+
+## Project Output / Demo
+
+<img 
+    src="./assets/Screenshot 2025-11-28 004213.png" 
+    alt="Screenshot of the final web application output showing data retrieval." 
+    width="800" 
+    height="400"
+/>
+
+ ---
+ 
+<img 
+    src="./assets/Screenshot 2025-11-28 020301.png" 
+    alt="Screenshot of the final web application output showing data retrieval." 
+    width="800" 
+    height="400"
+/>
+
 ---
 ## Notes
 
